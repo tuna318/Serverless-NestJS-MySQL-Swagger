@@ -1,0 +1,35 @@
+service: nest-test
+
+provider:
+  name: aws
+  profile: nest-test
+  region: ${env:REGION}
+  stage: ${env:STAGE}
+  runtime: nodejs10.x
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-optimize
+  - serverless-dotenv-plugin
+
+package:
+  exclude:
+    - src/**
+    - test/**
+
+functions:
+  api:
+    handler: dist/lambda.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+
+custom:
+  optimize:
+    external: ['swagger-ui-dist']
