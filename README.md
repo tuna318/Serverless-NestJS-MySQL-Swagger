@@ -1,5 +1,4 @@
 # Serverless, AwS, NestJS, Swagger, Mysql get started.
-<hr/>
 
 ## 1. Description
 A stater project for creating, setting up and deploying netjs project to aws lambda. <br/>
