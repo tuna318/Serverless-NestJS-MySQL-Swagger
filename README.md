@@ -77,4 +77,4 @@ While deploying, serverless may warn you about access authorities over services 
 
 ### 4. Result.
 After the deployment command executing complete, follow the generated endpoints and get the result:
-![](https://github.com/tuna-date/Serverless-NestJS-MySQL-Swagger/blob/master/images/result.jpg)
+![](https://github.com/tuna-date/Serverless-NestJS-MySQL-Swagger/blob/master/images/example.jpg)
